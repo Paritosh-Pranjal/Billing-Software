@@ -4,6 +4,8 @@ import { useAppContext } from "../../context/AppContext";
 
 const Explore = () => {
   const { categories } = useAppContext();
+  console.log("🚀 ~ Explore ~ categories:", categories);
+
   return (
     <div className="explore-container text-light">
       <div className="left-column">

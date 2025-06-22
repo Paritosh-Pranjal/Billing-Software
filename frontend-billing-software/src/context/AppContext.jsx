@@ -3,7 +3,7 @@ import { fetchAllCategories } from "../service/CategoryService";
 
 const AppContext = createContext(null);
 
-export default function AppContextProvider({ props }) {
+export default function AppContextProvider(props) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
