@@ -52,10 +52,10 @@ const CategoryForm = () => {
   };
 
   return (
-    <div className="mx-2 mt-2 overflow-y-auto">
+    <div className="mx-2 mt-2 overflow-y-auto rounded">
       <div className="row">
         <div className="card col-md-12 form-container">
-          <div className="card-body">
+          <div className="card-body ">
             <form onSubmit={onSubmitHandler}>
               <div className="mb-3">
                 <label
