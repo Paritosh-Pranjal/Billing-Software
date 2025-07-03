@@ -10,7 +10,8 @@ import CartSummary from "../../components/CartSummary/CartSummary";
 const Explore = () => {
   const { categories } = useAppContext();
   const [selectedCategory, setSelectedCategory] = useState("");
-
+  const [customerName, setCustomerName] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
   return (
     <div className="explore-container text-light">
       <div className="left-column">
@@ -43,7 +44,12 @@ const Explore = () => {
             height: "15%",
           }}
         >
-          <CustomerForm />
+          <CustomerForm
+            customerName={customerName}
+            mobileNumber={mobileNumber}
+            setCustomerName={setCustomerName}
+            setMobileNumber={setMobileNumber}
+          />
         </div>
         <hr className="my-3 text-light" />
         <div
