@@ -16,7 +16,7 @@ public class OrderItemEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
     @Column(unique = true)
     private String itemId;
     private String name;
