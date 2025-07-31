@@ -1,6 +1,8 @@
 package com.backend.billing.controller;
 
+import com.backend.billing.io.OrderResponse;
 import com.backend.billing.io.PaymentRequest;
+import com.backend.billing.io.PaymentVerificationRequest;
 import com.backend.billing.io.RazorpayOrderResponse;
 import com.backend.billing.service.OrderService;
 import com.backend.billing.service.RazorpayService;
@@ -21,5 +23,10 @@ public class PaymentController {
     @ResponseStatus(HttpStatus.CREATED)
     public RazorpayOrderResponse createRazorpayOrder(@RequestBody PaymentRequest request)throws RazorpayException {
         return razorpayService.createOrder(request.getAmount(),request.getCurrency());
+    }
+
+    @PostMapping("/verify")
+    public OrderResponse verifyPayment(@RequestBody PaymentVerificationRequest request){
+        return orderService.verifyPayment(request);
     }
 }
